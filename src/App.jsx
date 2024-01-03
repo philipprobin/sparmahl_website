@@ -5,7 +5,7 @@ import iphones from "./assets/iphones.png";
 function App() {
   return (
     <div className="bg-customBlack  min-h-screen p-20">
-      <div className="container mx-auto mt-32 grid h-full w-full grid-cols-1 place-items-center lg:mt-14 lg:grid-cols-2">
+      <div className="container mx-auto grid h-full w-full grid-cols-1 place-items-center lg:grid-cols-2">
         <div className="col-span-1">
           <HeaderDescription />
         </div>
