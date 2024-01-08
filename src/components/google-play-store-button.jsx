@@ -4,7 +4,7 @@ const GooglePlayButton = () => {
   return (
     <button
       type="button"
-      className="flex items-center justify-center w-48 lg:w-48 mt-3 text-black bg-white rounded-lg h-14"
+      className="flex items-center justify-center w-48 lg:w-48  text-black bg-white rounded-lg h-14 sm:ml-2 my-2"
     >
       <div className="mr-3">
         <svg viewBox="30 336.7 120.9 129.2" width="30">

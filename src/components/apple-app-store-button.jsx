@@ -4,7 +4,7 @@ const AppleAppStoreButton = () => {
   return (
     <button
       type="button"
-      className="flex items-center justify-center w-48 mt-3 mr-4 text-black bg-white border border-black h-14 rounded-xl"
+      className="flex items-center justify-center w-48 text-black bg-white border border-black h-14 rounded-xl my-2"
     >
       <div className="mr-3">
         <svg viewBox="0 0 384 512" width="30">
