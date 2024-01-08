@@ -19,7 +19,7 @@ const HeaderDescription = () => {
         Hole dir die App
       </h6>
 
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col sm:flex-row">
         <AppleAppStoreButton />
         <GooglePlayStoreButton />
         
