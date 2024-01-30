@@ -7,10 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        "main": "#00b894",
-        "customGreyBg": "#e9e9e9",
-        "customTeal": "#00b894",
-        "customBlackFont": "#2d3436",
+        "main": "#006239",
+        "customBlack": "#212121",
       },
     },
   },
