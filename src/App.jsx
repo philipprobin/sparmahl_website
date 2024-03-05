@@ -5,7 +5,7 @@ import AppleAppStoreButton from "./components/apple-app-store-button";
 import GooglePlayStoreButton from "./components/google-play-store-button";
 import home from "./assets/screenshots/home.png";
 import recipe from "./assets/screenshots/recipe.png";
-import search from "./assets/screenshots/search.png";
+import search from "./assets/screenshots/list.png";
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
           <HeaderDescription />
         </div>
         <div>
-          <img src={home} alt="home" className="w-64 h-auto m-8" />
+          <img src={home} alt="home" className="w-80 h-auto m-8" />
         </div>
         {/*Block 2*/}
         <div>
-          <img src={recipe} alt="recipe" className="w-64 h-auto m-8" />
+          <img src={recipe} alt="recipe" className="w-80 h-auto m-8" />
         </div>
         <div className="col-span-1 m-4">
           <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
@@ -29,12 +29,12 @@ function App() {
         </div>
         {/*Block 3*/}
         <div className="col-span-1 m-4">
-          <h1 class="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
+          <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
             Finde das günstigste Produkt aus allen Supermärkten
           </h1>
         </div>
         <div>
-          <img src={search} alt="search" className="w-64 h-auto m-8" />
+          <img src={search} alt="search" className="w-80 h-auto m-8" />
         </div>
       </div>
 
