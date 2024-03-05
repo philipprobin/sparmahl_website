@@ -23,8 +23,8 @@ function App() {
           <img src={recipe} alt="recipe" className="w-64 h-auto m-8" />
         </div>
         <div className="col-span-1 m-4">
-          <h1 class="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
-            Jedes Rezept ist deine Chance zu sparen
+          <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
+            Jedes Rezept ist deine Chance zu sparen.
           </h1>
         </div>
         {/*Block 3*/}
