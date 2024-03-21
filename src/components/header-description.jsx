@@ -1,5 +1,5 @@
-import AppleAppStoreButton from "./apple-app-store-button";
-import GooglePlayStoreButton from "./google-play-store-button";
+// import AppleAppStoreButton from "./apple-app-store-button";
+// import GooglePlayStoreButton from "./google-play-store-button";
 // racfe
 
 const HeaderDescription = () => {
@@ -18,11 +18,11 @@ const HeaderDescription = () => {
           <h6 className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-primary">
 
           </h6>
-          <div className="flex flex-col sm:flex-row">
-              <AppleAppStoreButton/>
-              <GooglePlayStoreButton/>
+          {/*<div className="flex flex-col sm:flex-row">*/}
+          {/*    <AppleAppStoreButton/>*/}
+          {/*    <GooglePlayStoreButton/>*/}
 
-          </div>
+          {/*</div>*/}
       </div>
   );
 };

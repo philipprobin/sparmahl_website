@@ -1,8 +1,8 @@
 
 import HeaderDescription from "./components/header-description";
 import Newsletter from "./components/newsletter";
-import AppleAppStoreButton from "./components/apple-app-store-button";
-import GooglePlayStoreButton from "./components/google-play-store-button";
+// import AppleAppStoreButton from "./components/apple-app-store-button";
+// import GooglePlayStoreButton from "./components/google-play-store-button";
 import home from "./assets/screenshots/home.png";
 import recipe from "./assets/screenshots/recipe.png";
 import search from "./assets/screenshots/list.png";
@@ -39,12 +39,11 @@ function App() {
       </div>
 
       <Newsletter />
+      {/*<div className="flex flex-col sm:flex-row items-center justify-center">*/}
+      {/*  <AppleAppStoreButton />*/}
+      {/*  <GooglePlayStoreButton />*/}
+      {/*</div>*/}
 
-      <div className="flex flex-col sm:flex-row items-center justify-center">
-        <AppleAppStoreButton />
-        <GooglePlayStoreButton />
-      </div>
-      
     </div>
   );
 }
