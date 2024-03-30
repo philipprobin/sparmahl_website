@@ -20,7 +20,6 @@ const HeaderDescription = () => {
           <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">
 
           </h6>
-// Hole dir die App
           <div className="flex flex-col sm:flex-row">
               <AppleAppStoreButton/>
               <GooglePlayStoreButton/>
