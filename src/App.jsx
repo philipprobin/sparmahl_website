@@ -3,9 +3,9 @@ import HeaderDescription from "./components/header-description";
 import Newsletter from "./components/newsletter";
 import AppleAppStoreButton from "./components/apple-app-store-button";
 import GooglePlayStoreButton from "./components/google-play-store-button";
-import home from "./assets/screenshots/home.png";
-import recipe from "./assets/screenshots/recipe.png";
-import search from "./assets/screenshots/list.png";
+import home from "./assets/screenshots/Startseite.png";
+import recipe from "./assets/screenshots/Rezept.png";
+import search from "./assets/screenshots/Einkaufsliste.png";
 
 function App() {
   return (
