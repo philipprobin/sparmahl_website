@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HeaderDescription from "./components/header-description";
 import Newsletter from "./components/newsletter";
 import AppleAppStoreButton from "./components/apple-app-store-button";
