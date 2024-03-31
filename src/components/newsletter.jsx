@@ -6,12 +6,14 @@ const Newsletter = () => {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(null)
+    const [successMessage, setSuccessMessage] = useState(null)
 
-    function addToNewsletter(event, email) {
+    async function addToNewsletter(event, email) {
         event.preventDefault()
-        axios.post('http://localhost:3000/subscribe', {email: email}) // TODO ADD ENV files
-            .then(() => {
+        await axios.post('http://localhost:3000/subscribe', {email: email}) // TODO ADD ENV files
+            .then((response) => {
                 setSuccess(true);
+                setSuccessMessage(response.data.message)
                 setTimeout(() => {
                     setSuccess(false);
                 }, 15_000)
@@ -49,7 +51,7 @@ const Newsletter = () => {
                             Abonnieren
                         </button>
                     </form>
-                    {success && <div className="text-green-400 p-4 w-full text-center">Erfolgreich abonniert!</div>}
+                    {success && <div className="text-green-400 p-4 w-full text-center">{successMessage}</div>}
                     {error && <div className="text-red-600 p-4 w-full text-center">{errorMessage}</div>}
                 </div>
             </div>
