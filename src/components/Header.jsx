@@ -1,5 +1,3 @@
-import React from "react";
-
 const Headerneu = () => {
     return (
         <header className="bg-customBlack text-white py-4">
