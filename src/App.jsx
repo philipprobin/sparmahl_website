@@ -23,13 +23,15 @@ function App() {
           <img src={recipe} alt="recipe" className="w-80 h-auto m-8" />
         </div>
         <div className="col-span-1 m-4">
-          <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
+          <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white "
+              style={{color: '#8F2F1A'}}>
             Jedes Rezept ist deine Chance zu sparen.
           </h1>
         </div>
         {/*Block 3*/}
         <div className="col-span-1 m-4">
-          <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white ">
+          <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white "
+              style={{color: '#8F2F1A'}}>
             Finde das günstigste Produkt aus allen Supermärkten
           </h1>
         </div>
