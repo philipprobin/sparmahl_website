@@ -1,6 +1,6 @@
 import React from "react";
-import AppleAppStoreButton from "./apple-app-store-button";
-import GooglePlayStoreButton from "./google-play-store-button";
+import AppleAppStoreButton from "./AppleAppStoreButton.jsx";
+import GooglePlayStoreButton from "./GooglePlayStoreButtonn.jsx";
 // racfe
 
 const HeaderDescription = () => {
