@@ -1,16 +1,16 @@
-import HeaderDescription from "./components/header-description";
-import Newsletter from "./components/newsletter";
-import AppleAppStoreButton from "./components/apple-app-store-button";
-import GooglePlayStoreButton from "./components/google-play-store-button";
+import HeaderDescription from "./components/HeaderDescription.jsx";
+import Newsletter from "./components/Newsletter.jsx";
+import AppleAppStoreButton from "./components/AppleAppStoreButton.jsx";
+import GooglePlayStoreButton from "./components/GooglePlayStoreButtonn.jsx";
 import home from "./assets/screenshots/Startseite.png";
 import recipe from "./assets/screenshots/Rezept.png";
 import search from "./assets/screenshots/Einkaufsliste.png";
-import Headerneu from "./components/Header.jsx";
+import Header from "./components/Header.jsx";
 
 function App() {
   return (
       <div>
-      <Headerneu />
+      <Header />
     <div className="bg-customBlack  min-h-screen p-2 md:p-20">
       <div className="container mx-auto grid h-full w-full grid-cols-1 place-items-center lg:grid-cols-2 ">
         {/*Block 1*/}
@@ -48,7 +48,6 @@ function App() {
         <AppleAppStoreButton />
         <GooglePlayStoreButton />
       </div>
-      
     </div>
       </div>
   );
