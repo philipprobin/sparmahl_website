@@ -9,6 +9,9 @@ const Newsletter = () => {
     const [errorMessage, setErrorMessage] = useState(null)
     const [successMessage, setSuccessMessage] = useState(null)
 
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+    }
     async function addToNewsletter(event, email) {
         event.preventDefault()
         await axios.post(import.meta.env.VITE_NEWSLETTER_API, {email: email}) // .env.local file erstellen und VITE_NEWSLETTER_API=https://localhost:3000/subscribe eintragen (SIEHE https://vitejs.dev/guide/env-and-mode)
@@ -51,7 +54,8 @@ const Newsletter = () => {
                             placeholder="Email Addresse"
                         />
                         <button
-                            className="focus:outline-none focus:ring-offset-2 focus:ring border border-primary sm:border-transparent w-full sm:w-auto bg-white py-4 px-6 hover:bg-opacity-75 text-primary">
+                            disabled={!email}
+                            className={`focus:outline-none focus:ring-offset-2 focus:ring border border-primary sm:border-transparent w-full sm:w-auto py-4 px-6 ${email ? 'bg-white hover:bg-opacity-85 text-orange-700 hover:text-orange-900' : 'text-gray-600'}`}>
                             Abonnieren
                         </button>
                     </form>
