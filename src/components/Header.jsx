@@ -9,7 +9,7 @@ const Header = () => {
                 {/* Wrapper div with sm:mx-4 for horizontal margins on small screens */}
                 <div className="flex justify-between items-center mx-2">
                     {/* Logo */}
-                    <img src={SparMahlBanner} alt="SparMahl Logo" className="h-16 md:h-24"/>
+                    <img src={SparMahlBanner} alt="SparMahl Logo" className="sm:h-12 h-10"/>
 
                     {/* Navigation */}
                     <nav className="flex items-center space-x-4">
