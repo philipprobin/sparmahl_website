@@ -1,5 +1,6 @@
 import {useState} from "react";
 import axios from "axios";
+
 const Newsletter = () => {
 
     const [email, setEmail] = useState('');
@@ -10,7 +11,7 @@ const Newsletter = () => {
 
     async function addToNewsletter(event, email) {
         event.preventDefault()
-        await axios.post('http://localhost:3000/subscribe', {email: email}) // TODO ADD ENV files
+        await axios.post(import.meta.env.VITE_NEWSLETTER_API, {email: email}) // .env.local file erstellen und VITE_NEWSLETTER_API=https://localhost:3000/subscribe eintragen (SIEHE https://vitejs.dev/guide/env-and-mode)
             .then((response) => {
                 setSuccess(true);
                 setSuccessMessage(response.data.message)
