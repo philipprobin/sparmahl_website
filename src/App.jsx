@@ -31,7 +31,7 @@ function App() {
                     </div>
                     {/*Block 3*/}
                     <div className="col-span-1 m-4">
-                        <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white text-primary">
+                        <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl font-semibold leading-tight text-white text-primary" style={{ color: "#8F2F1A" }}>
                             Finde das günstigste Produkt aus allen Supermärkten
                         </h1>
                     </div>
