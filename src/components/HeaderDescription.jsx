@@ -1,6 +1,6 @@
 import React from "react";
-import AppleAppStoreButton from "./apple-app-store-button";
-import GooglePlayStoreButton from "./google-play-store-button";
+import AppleAppStoreButton from "./AppleAppStoreButton.jsx";
+import GooglePlayStoreButton from "./GooglePlayStoreButtonn.jsx";
 // racfe
 
 const HeaderDescription = () => {
@@ -13,19 +13,18 @@ const HeaderDescription = () => {
 
           {/* this is a comment*/}
           <div>
-              <p class="block antialiased font-sans text-xl font-normal leading-relaxed text-inherit mb-7 mt-2 md:pr-16 xl:pr-28"
+              <p className="block antialiased font-sans text-xl font-normal leading-relaxed text-inherit mb-7 mt-2 md:pr-16 xl:pr-28"
               style={{color: '#8F2F1A'}}>
                   Die Einkaufs-App für alle Supermärkte
               </p>
           </div>
 
-          <h6 class="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">
+          <h6 className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">
 
           </h6>
           <div className="flex flex-col sm:flex-row">
               <AppleAppStoreButton/>
               <GooglePlayStoreButton/>
-
           </div>
       </div>
   );

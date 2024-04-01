@@ -1,6 +1,4 @@
-import React from "react";
-
-const Headerneu = () => {
+const Header = () => {
     return (
         <header className="bg-customBlack text-white py-4">
             <div className="container mx-auto flex justify-between items-center">
@@ -41,4 +39,4 @@ const Headerneu = () => {
     );
 };
 
-export default Headerneu;
+export default Header;
