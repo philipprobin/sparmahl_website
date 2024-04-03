@@ -51,7 +51,7 @@ const Newsletter = () => {
                         <input
                             onChange={(e) => setEmail(e.target.value)}
                             className="border border-primary sm:border-transparent text-base w-full font-medium leading-none text-primary p-4 focus:outline-none bg-transparent placeholder-primary"
-                            placeholder="Email Addresse"
+                            placeholder="Email Adresse"
                         />
                         <button
                             disabled={!email}
