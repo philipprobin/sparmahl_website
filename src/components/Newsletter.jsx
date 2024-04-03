@@ -1,5 +1,16 @@
 import {useState} from "react";
-import axios from "axios";
+import {initializeApp} from "firebase/app";
+import {getFirestore, collection, addDoc} from 'firebase/firestore/lite';
+
+const firebaseConfig = {
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
+};
+
 
 const Newsletter = () => {
 
@@ -12,27 +23,28 @@ const Newsletter = () => {
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     }
+
+
+
     async function addToNewsletter(event, email) {
         event.preventDefault()
-        await axios.post(import.meta.env.VITE_NEWSLETTER_API, {email: email}) // .env.local file erstellen und VITE_NEWSLETTER_API=https://localhost:3000/subscribe eintragen (SIEHE https://vitejs.dev/guide/env-and-mode)
-            .then((response) => {
-                setSuccess(true);
-                setSuccessMessage(response.data.message)
-                setTimeout(() => {
-                    setSuccess(false);
-                }, 15_000)
-            })
-            .catch(error => {
-                if (error.response && error.response.status === 400 && error.response.data && error.response.data.error) {
-                    console.log(error.response.data.error)
-                    setErrorMessage(error.response.data.error)
-                }
-                setError(true);
-                setTimeout(() => {
-                    setError(false);
-                }, 15_000)
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        try {
+            const docRef = await addDoc(collection(db, "sparmahl_subscribers"), {
+                email: email
             });
+            setSuccess(true);
+            setSuccessMessage("Erfolgreich abonniert !" +  docRef.id)
+        } catch (e) {
+            setError(true);
+            if (e.code === 'permission-denied') {
+                setErrorMessage("Keine Rechte")
+            } else {
+                setErrorMessage("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.")
+        }
     }
+}
 
     return (
         <div className="2xl:mx-auto 2xl:container mx-4 ">
@@ -54,8 +66,8 @@ const Newsletter = () => {
                             placeholder="Email Adresse"
                         />
                         <button
-                            disabled={!email}
-                            className={`focus:outline-none focus:ring-offset-2 focus:ring border border-primary sm:border-transparent w-full sm:w-auto py-4 px-6 ${email ? 'bg-white hover:bg-opacity-85 text-orange-700 hover:text-orange-900' : 'text-gray-600'}`}>
+                            disabled={!isValidEmail(email)}
+                            className={`focus:outline-none focus:ring-offset-2 focus:ring border border-primary sm:border-transparent w-full sm:w-auto py-4 px-6 ${isValidEmail(email) ? 'bg-white hover:bg-opacity-85 text-orange-700 hover:text-orange-900' : 'text-gray-600'}`}>
                             Abonnieren
                         </button>
                     </form>
