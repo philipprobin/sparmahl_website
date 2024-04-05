@@ -1,6 +1,6 @@
-import React, {useRef, useState} from "react";
+import {useState} from "react";
 import {initializeApp} from "firebase/app";
-import {getFirestore, collection, addDoc} from 'firebase/firestore/lite';
+import {getFirestore, arrayUnion, updateDoc, doc} from 'firebase/firestore/lite';
 
 const firebaseConfig = {
     apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -18,7 +18,7 @@ const Newsletter = () => {
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(null)
     const [successMessage, setSuccessMessage] = useState(null)
-    const [showDialog, setShowDialog] = useState(false)
+   // const [showDialog, setShowDialog] = useState(false)
     const [acceptedPrivacy, setAcceptedPrivacy] = useState(false)
 
     function isValidEmail(email) {
@@ -30,15 +30,16 @@ const Newsletter = () => {
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
         try {
-            const docRef = await addDoc(collection(db, "sparmahl_subscribers"), {
-                email: email
-            });
+            const docRef = doc(db, "sparmahl_subscribers", "mails");
+            await updateDoc(docRef, {
+                mails: arrayUnion(email)
+            })
             setSuccess(true);
-            setSuccessMessage("Erfolgreich abonniert !" + docRef.id)
+            setSuccessMessage("Erfolgreich abonniert!");
         } catch (e) {
             setError(true);
             if (e.code === 'permission-denied') {
-                setErrorMessage("Keine Rechte")
+                setErrorMessage("Diese Email ist bereits registriert!")
             } else {
                 setErrorMessage("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.")
             }
