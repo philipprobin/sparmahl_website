@@ -20,13 +20,16 @@ const HeaderDescription = () => {
           <h6 className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">
 
           </h6>
-          <div className={"flex flex-col justify-center items-center sm:flex-row lg:self-start justify-self-center self-center"}>
-              <div className="flex flex-col sm:flex-row">
+          <div
+              className={"flex flex-col items-center w-min lg:self-start justify-self-center self-center"}>
+              <div className="flex flex-col sm:flex-row lg:self-start">
                   <AppleAppStoreButton/>
                   <GooglePlayStoreButton/>
               </div>
-              <p className="italic text-gray-400">Coming Soon!</p>
+              <p className="italic text-gray-400 justify-center items-center flex-row">Coming Soon!</p>
           </div>
+
+
       </div>
   );
 };
