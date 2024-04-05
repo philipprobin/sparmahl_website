@@ -20,9 +20,12 @@ const HeaderDescription = () => {
           <h6 className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-white">
 
           </h6>
-          <div className="flex flex-col sm:flex-row">
-              <AppleAppStoreButton/>
-              <GooglePlayStoreButton/>
+          <div className={"flex flex-col justify-center items-center"}>
+              <div className="flex flex-col sm:flex-row">
+                  <AppleAppStoreButton/>
+                  <GooglePlayStoreButton/>
+              </div>
+              <p className="italic text-gray-400">Coming Soon!</p>
           </div>
       </div>
   );

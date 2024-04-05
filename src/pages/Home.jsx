@@ -43,11 +43,14 @@ const Home = () => {
                 </div>
 
                 <Newsletter/>
-
-                <div className="flex flex-col sm:flex-row items-center justify-center">
-                    <AppleAppStoreButton/>
-                    <GooglePlayStoreButton/>
+                <div className={"flex flex-col justify-center items-center"}>
+                    <div className="flex flex-col sm:flex-row items-center justify-center">
+                        <AppleAppStoreButton/>
+                        <GooglePlayStoreButton/>
+                    </div>
+                    <p className ="italic text-gray-400">Coming Soon!</p>
                 </div>
+
 
                 <div className="flex flex-col sm:flex-row items-center justify-center mt-12">
                     <a href="/impressum" className="hover:opacity-75 text-primary p-2">
