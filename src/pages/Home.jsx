@@ -33,9 +33,8 @@ const Home = () => {
                     </div>
                     {/*Block 3*/}
                     <div className="col-span-1 m-4 lg:order-5 order-4">
-                        <h1 className="block antialiased tracking-normal font-sans text-4xl sm:text-5xl
-                         font-semibold leading-tight text-white text-primary
-                         text-center lg:text-right"
+                        <h1 className="lg:block antialiased tracking-normal font-sans text-4xl sm:text-5xl
+                         font-semibold leading-tight text-primary text-center lg:text-start"
                             style={{color: "#8F2F1A"}}>
                             Finde das günstigste Produkt aus allen Supermärkten
                         </h1>
