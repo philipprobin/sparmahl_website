@@ -48,9 +48,6 @@ const Newsletter = () => {
 
     return (
         <>
-            <div>
-                Neuer Test: {import.meta.env.VITE_FIREBASE_PROJECT_ID}
-            </div>
             <div className="2xl:mx-auto 2xl:container mx-4 ">
                 <div className="w-full relative flex items-center justify-center">
 
