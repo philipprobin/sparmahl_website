@@ -26,7 +26,6 @@ const HeaderDescription = () => {
                   <AppleAppStoreButton/>
                   <GooglePlayStoreButton/>
               </div>
-              <p className="italic text-gray-400 justify-center items-center flex-row">Coming Soon!</p>
           </div>
 
 

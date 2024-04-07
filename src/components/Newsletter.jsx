@@ -18,7 +18,7 @@ const Newsletter = () => {
     const [error, setError] = useState(false);
     const [errorMessage, setErrorMessage] = useState(null)
     const [successMessage, setSuccessMessage] = useState(null)
-   // const [showDialog, setShowDialog] = useState(false)
+    // const [showDialog, setShowDialog] = useState(false)
     const [acceptedPrivacy, setAcceptedPrivacy] = useState(false)
 
     function isValidEmail(email) {
@@ -73,13 +73,14 @@ const Newsletter = () => {
                             </button>
                         </form>
                         <label>
-<input
+                            <input
                                 onChange={(e) => setAcceptedPrivacy(e.target.checked)}
                                 type="checkbox"
-                                className="mt-4"
+                                className="m-2"
                             />
                             Ich akzeptiere die
-                            <a href="/datenschutzrichtlinien" target={'_blank'} className="text-primary"> Datenschutzbestimmungen</a>
+                            <a href="/datenschutzrichtlinien" target={'_blank'}
+                               className="text-primary"> Datenschutzbestimmungen</a>
                         </label>
                         {success && <div className="text-green-400 p-4 w-full text-center">{successMessage}</div>}
                         {error && <div className="text-red-600 p-4 w-full text-center">{errorMessage}</div>}

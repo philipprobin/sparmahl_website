@@ -1,7 +1,5 @@
 import HeaderDescription from "./../components/HeaderDescription.jsx";
 import Newsletter from "./../components/Newsletter.jsx";
-import AppleAppStoreButton from "./../components/AppleAppStoreButton.jsx";
-import GooglePlayStoreButton from "./../components/GooglePlayStoreButtonn.jsx";
 import home from "./../assets/screenshots/Startseite.png";
 import recipe from "./../assets/screenshots/Rezept.png";
 import search from "./../assets/screenshots/Einkaufsliste.png";
@@ -45,13 +43,6 @@ const Home = () => {
                 </div>
 
                 <Newsletter/>
-                <div className={"flex flex-col justify-center items-center"}>
-                    <div className="flex flex-col sm:flex-row items-center justify-center">
-                        <AppleAppStoreButton/>
-                        <GooglePlayStoreButton/>
-                    </div>
-                    <p className ="italic text-gray-400">Coming Soon!</p>
-                </div>
 
 
                 <div className="flex flex-col sm:flex-row items-center justify-center mt-12">

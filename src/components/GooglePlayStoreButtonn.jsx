@@ -1,11 +1,15 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-
 const GooglePlayButton = () => {
+    // Define the click handler function
+    const handleClick = () => {
+        // Open the URL in a new tab
+        window.open("https://play.google.com/store/apps/details?id=de.sparmahl", "_blank");
+    };
+
     return (
         <button
             type="button"
-            className="flex items-center justify-center w-48 lg:w-48  text-black bg-white  border border-black rounded-lg h-14 sm:ml-2 my-2"
+            className="flex items-center justify-center w-48 lg:w-48 text-black bg-white border border-black rounded-lg h-14 sm:ml-2 my-2"
+            onClick={handleClick} // Add the onClick handler here
         >
             <div className="mr-3">
                 <svg viewBox="30 336.7 120.9 129.2" width="30">
