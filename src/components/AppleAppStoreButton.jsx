@@ -1,9 +1,14 @@
 const AppleAppStoreButton = () => {
+    const handleClick = () => {
+        // Open the URL in a new tab
+        window.open("https://apps.apple.com/de/app/sparmahl/id6483932367", "_blank");
+    };
     return (
         <div className="flex flex-col items-center justify-center"> {/* This container centers its children */}
             <button
                 type="button"
                 className="flex items-center justify-center w-48 text-black bg-white border border-black h-14 rounded-xl my-2"
+                onClick={handleClick} // Add the onClick handler here
             >
                 <div className="mr-3">
                     <svg viewBox="0 0 384 512" width="30">
@@ -18,7 +23,6 @@ const AppleAppStoreButton = () => {
                     <div className="-mt-1 font-sans text-2xl font-semibold">App Store</div>
                 </div>
             </button>
-            <p className="italic text-gray-400 text-center">Coming Soon!</p> {/* Text is centered */}
         </div>
     );
 };
