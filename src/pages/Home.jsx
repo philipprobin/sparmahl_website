@@ -4,6 +4,8 @@ import home from "./../assets/screenshots/Startseite.png";
 import recipe from "./../assets/screenshots/Rezept.png";
 import search from "./../assets/screenshots/Einkaufsliste.png";
 import Header from "./../components/Header.jsx";
+import AppleAppStoreButton from "../components/AppleAppStoreButton.jsx";
+import GooglePlayStoreButton from "../components/GooglePlayStoreButtonn.jsx";
 
 
 const Home = () => {
@@ -32,8 +34,7 @@ const Home = () => {
                     {/*Block 3*/}
                     <div className="col-span-1 m-4 lg:order-5 order-4">
                         <h1 className="lg:block antialiased tracking-normal font-sans text-4xl sm:text-5xl
-                         font-semibold leading-tight text-primary text-center lg:text-start"
-                            style={{color: "#8F2F1A"}}>
+                         font-semibold leading-tight text-primary text-center lg:text-start">
                             Finde das günstigste Produkt aus allen Supermärkten
                         </h1>
                     </div>
@@ -43,7 +44,12 @@ const Home = () => {
                 </div>
 
                 <Newsletter/>
-
+                <div className={"flex flex-col justify-center items-center"}>
+                    <div className="flex flex-col sm:flex-row items-center justify-center">
+                        <AppleAppStoreButton/>
+                        <GooglePlayStoreButton/>
+                    </div>
+                </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center mt-12">
                     <a href="/impressum" className="hover:opacity-75 text-primary p-2">
